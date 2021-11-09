@@ -6,15 +6,6 @@ updates:
       interval: daily
     open-pull-requests-limit: 5
     rebase-strategy: "disabled"
-    ignore:
-        # using a cilium-specific fork
-      - dependency-name: "github.com/miekg/dns"
-        # k8s dependencies will be updated manually along with tests
-      - dependency-name: "k8s.io/*"
-      - dependency-name: "sigs.k8s.io/*"
-    labels:
-    - kind/enhancement
-    - release-note/misc
 
   - package-ecosystem: github-actions
     directory: /
@@ -22,9 +13,6 @@ updates:
       interval: daily
     open-pull-requests-limit: 5
     rebase-strategy: "disabled"
-    labels:
-    - kind/enhancement
-    - release-note/misc
 
   - package-ecosystem: github-actions
     directory: /
@@ -33,9 +21,6 @@ updates:
     target-branch: "v1.10"
     open-pull-requests-limit: 5
     rebase-strategy: "disabled"
-    labels:
-    - kind/enhancement
-    - release-note/misc
 
   - package-ecosystem: github-actions
     directory: /
@@ -44,9 +29,6 @@ updates:
     target-branch: "v1.9"
     open-pull-requests-limit: 5
     rebase-strategy: "disabled"
-    labels:
-    - kind/enhancement
-    - release-note/misc
 
   - package-ecosystem: github-actions
     directory: /
@@ -55,6 +37,3 @@ updates:
     target-branch: "v1.8"
     open-pull-requests-limit: 5
     rebase-strategy: "disabled"
-    labels:
-    - kind/enhancement
-    - release-note/misc
