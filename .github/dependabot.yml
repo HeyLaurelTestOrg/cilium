@@ -1,18 +1,5 @@
 version: 2
 updates:
-  - package-ecosystem: gomod
-    directory: /
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 5
-    rebase-strategy: "disabled"
-
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 5
-    rebase-strategy: "disabled"
 
   - package-ecosystem: github-actions
     directory: /
@@ -27,13 +14,5 @@ updates:
     schedule:
       interval: daily
     target-branch: "v1.9"
-    open-pull-requests-limit: 5
-    rebase-strategy: "disabled"
-
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: daily
-    target-branch: "v1.8"
     open-pull-requests-limit: 5
     rebase-strategy: "disabled"
