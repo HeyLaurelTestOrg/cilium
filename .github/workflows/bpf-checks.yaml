@@ -19,7 +19,7 @@ jobs:
 
       - name: Send slack notification
         if: ${{ (cancelled() || failure()) && (github.event_name == 'schedule' || github.event_name == 'push') }}
-        uses: 8398a7/action-slack@c84a35cfa82a01f3733a3cbf5d5260123e55c2f9
+        uses: 8398a7/action-slack@a189acbf0b7ea434558662ae25a0de71df69a435
         with:
           status: ${{ job.status }}
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
@@ -35,7 +35,7 @@ jobs:
           entrypoint: ./contrib/coccinelle/check-cocci.sh
       - name: Send slack notification
         if: ${{ (cancelled() || failure()) && (github.event_name == 'schedule' || github.event_name == 'push') }}
-        uses: 8398a7/action-slack@c84a35cfa82a01f3733a3cbf5d5260123e55c2f9
+        uses: 8398a7/action-slack@a189acbf0b7ea434558662ae25a0de71df69a435
         with:
           status: ${{ job.status }}
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
@@ -68,7 +68,7 @@ jobs:
           make --quiet -C bpf build_all || (echo "Run 'make -C bpf build_all' locally to investigate build breakages"; exit 1)
       - name: Send slack notification
         if: ${{ (cancelled() || failure()) && (github.event_name == 'schedule' || github.event_name == 'push') }}
-        uses: 8398a7/action-slack@c84a35cfa82a01f3733a3cbf5d5260123e55c2f9
+        uses: 8398a7/action-slack@a189acbf0b7ea434558662ae25a0de71df69a435
         with:
           status: ${{ job.status }}
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
